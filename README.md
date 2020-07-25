@@ -13,17 +13,25 @@ This library is a compatibility layer around [@oblador/react-native-vector-icons
 
 ## Usage
 
-This library is part of the `expo` package, so if you are using `expo` you can simply use it like so
+This library is part of the `expo` package, so if you are using `expo` you can simply use it like so , and also you can add some custom into it using StyleSheet.
 
 ```tsx
 import React from 'react';
 import { Ionicons } from '@expo/vector-icons';
+import {StyleSheet} from 'react-native';
 
 export default class IconExample extends React.Component {
   render() {
-    return <Ionicons name="md-checkmark-circle" size={32} color="green" />;
+    return <Ionicons style = {styles.icon} name="md-checkmark-circle" size={32} color="green" />;
   }
 }
+
+const styles = StyleSheet.create({
+   icon : {
+      backgroundColor : 'black',
+      fontSize : 32
+   }
+});
 ```
 
 for more usage see [Expo icons documentation](https://docs.expo.io/guides/icons/)
